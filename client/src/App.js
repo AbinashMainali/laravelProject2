@@ -8,7 +8,7 @@ import {Project} from "./pages/Project";
 function App() {
     return (
         <div className={"App"}>
-            <Navbar expand={"md"} bg={"dark"} variant={"dark"} className={"navbar-light"}>
+            <Navbar expand={"md"} bg={"dark"} variant={"dark"} className={"navbar-light small"}>
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -34,7 +34,8 @@ function App() {
             </div>
             <div className={"App-footer"}>
                 <Container>
-                    <p>© 2021 Abinash Mainali</p>
+                    <p>© 2023 Abinash Mainali</p>
+
                 </Container>
 
 
