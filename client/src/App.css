@@ -1,4 +1,4 @@
-.App{
+.App {
     text-align: center;
 
     display: flex;
@@ -13,42 +13,147 @@
     letter-spacing: 0.0075em;
 
 
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+}
 
 
-    }
+.App-main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    margin:1rem;
+    flex: 1 0 auto;
 
-    .App-header{
-        background-color: #282c34;
-        min-height: 20vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: calc(10px + 2vmin);
-        color: white;
+}
 
-    }
+.App-footer {
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+}
+
+.Project{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 
-    .App-main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+}
 
-        flex-grow: 1;
-        padding: 1rem;
-    }
 
-    .App-footer{
-        background-color: #282c34;
-        min-height: 10vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: calc(10px + 2vmin);
-        color: white;
 
-    }
 
-    
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: max-content;
+    margin-left: 1rem;
+    height: 100%;
+}
+
+.Login .card-title{
+    font: bold 1.5rem 'Fira Sans', sans-serif;
+}
+
+.Login .card-text{
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+
+
+.Login input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.Login a {
+    color: #333;
+    text-decoration: none;
+}
+
+.Login a:hover {
+    text-decoration: underline;
+}
+
+.Login .error {
+    color: #cc0000;
+    margin-bottom: 1rem;
+}
+
+.Login .success {
+    color: #00cc00;
+    margin-bottom: 1rem;
+}
+
+.Login .loading {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.Login .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Login .form-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: normal;
+    font: 1rem 'Fira Sans', sans-serif;
+
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.Login .form-check-label, .form-check-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: normal;
+    font: 1rem 'Fira Sans', sans-serif;
+    margin-left:0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+
+
+
+

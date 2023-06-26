@@ -1,10 +1,17 @@
+
+
+
 export function Project() {
     return (
         <div className={"Project"}>
-            <div className={"Project-header"}>
-                <h1>Project</h1>
 
-            </div>
+
+
+            <div className={"Project-header"}>
+
+
+
+
             <div className={"Project-body"}>
                 <div className={"Project-body-content card text-start m-2 p-2 bg-body-secondary"}>
                     <a href="https://triviacontest.azurewebsites.net" title={"Trivia"} className={"link-success text-decoration-none link-opacity-50-hover"}>
@@ -19,6 +26,7 @@ export function Project() {
 
                 </div>
             </div>
+        </div>
         </div>
 
     )

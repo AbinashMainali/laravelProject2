@@ -1,9 +1,11 @@
 import './App.css';
+
 import {NavLink, Route, Routes} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Container, Nav, Navbar} from "react-bootstrap";
 import {Home} from "./pages/Home";
 import {Project} from "./pages/Project";
+import {Login} from "./pages/Login";
 
 function App() {
     return (
@@ -16,7 +18,7 @@ function App() {
                             <NavLink to="/" className="nav-link">
                                 Home
                             </NavLink>
-                            <NavLink to="/project" className="nav-link">
+                            <NavLink to="/login" className="nav-link">
                                 Project
                             </NavLink>
 
@@ -27,6 +29,7 @@ function App() {
             <div className="App-main">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/login" element={<Login/>}/>
                     <Route path="/project" element={<Project/>}/>
 
                 </Routes>
