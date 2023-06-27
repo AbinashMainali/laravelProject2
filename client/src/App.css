@@ -60,10 +60,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
 
 
 }
 
+.Project-body{
+
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+
+}
+
+.Project-body-content{
+      height: 100%;
+       width: 100%;
+         display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
 
 
 

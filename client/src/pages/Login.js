@@ -23,7 +23,7 @@ export function Login() {
             alert("Please fill the form")
         } else {
             alert("Thank you for your submission")
-            http.post("/users", inputs).then((response) => {
+            http.post("/users/", inputs).then((response) => {
                 console.log(response);
                 navigate("/project");
             }).catch((error) => {
@@ -32,7 +32,7 @@ export function Login() {
                 }
             );
         }
-        }
+    }
 
 
     return (
