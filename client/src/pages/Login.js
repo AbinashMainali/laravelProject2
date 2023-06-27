@@ -3,17 +3,18 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import http from "../helper/http";
 
-
+//Login component
 export function Login() {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
 
+    //handle input change
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setInputs((values) => ({...values, [name]: value}));
     }
-
+    //handle form submit
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(inputs);
@@ -23,8 +24,10 @@ export function Login() {
             alert("Please fill the form")
         } else {
             alert("Thank you for your submission")
+            //Send HTTP post request to create user
             http.post("/users/", inputs).then((response) => {
                 console.log(response);
+                //Navigate to project page
                 navigate("/project");
             }).catch((error) => {
                     console.log(error);

@@ -26,6 +26,7 @@ function App() {
                 </Container>
             </Navbar>
             <div className="App-main ">
+                {/*Route link to different element */}
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>

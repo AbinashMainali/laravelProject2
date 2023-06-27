@@ -1,8 +1,10 @@
 import {Container, Figure} from "react-bootstrap";
 
+//Home Component
 export function Home() {
-
+    //Render the content
     return (<div>
+
             <Container className={"Home"}>
                 <div className={"Home-header m-3 text-success-emphasis"}>
                     <h1>Hi! I am Abinash Mainali</h1>

@@ -1,13 +1,14 @@
 import {useEffect, useState} from "react";
 import http from "../helper/http";
 
-
+//project component
 export function Project() {
     const [users, setUsers] = useState([]);
     const [userComment, setUserComment] = useState("");
     const [commentList, setCommentList] = useState([]);
     const [id, setId] = useState("");
 
+    //fetch all users data
     const fetchAllUsers = () => {
         http
             .get("/users")
@@ -22,6 +23,7 @@ export function Project() {
             });
     }
 
+    //fetch all comments data
     const fetchAllComments = () => {
         http
             .get("/users")
@@ -35,20 +37,23 @@ export function Project() {
             });
     }
 
+
     useEffect(() => {
+        //fetch all users and comments data on component mount
         fetchAllUsers();
         fetchAllComments();
 
 
     }, []);
 
-
+    //handle input change
     const handleCommentChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setUserComment((values) => ({...values, [name]: value}));
     }
 
+    // Handle "Enter" key press on comment input
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -56,7 +61,7 @@ export function Project() {
         }
     }
 
-
+    //handle form submit
     const handleSubmit = () => {
         if (!userComment) {
             alert("Please enter comment")
