@@ -68,17 +68,6 @@ export function Login() {
                         />
 
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email </label>
-                        <input
-                            name="comment"
-                            className="form-control mb-2"
-                            placeholder="Comment"
-                            value={inputs.comment || ""}
-                            onChange={handleChange}
-                        />
-                    </div>
-
 
                     <div className={"d-grid gap-2"}>
                         <button type="submit" className="btn btn-primary">Submit</button>

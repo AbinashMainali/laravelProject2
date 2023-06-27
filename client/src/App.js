@@ -9,7 +9,7 @@ import {Login} from "./pages/Login";
 
 function App() {
     return (
-        <div className={"App"}>
+        <div className={"App "}>
             <Navbar expand={"md"} bg={"dark"} variant={"dark"} className={"navbar-light small"}>
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
@@ -21,12 +21,11 @@ function App() {
                             <NavLink to="/login" className="nav-link">
                                 Project
                             </NavLink>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <div className="App-main">
+            <div className="App-main ">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>

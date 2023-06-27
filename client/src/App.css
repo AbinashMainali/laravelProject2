@@ -89,6 +89,23 @@
 }
 
 
+.comment{
+    margin:0.2rem;
+    height: 50%;
+
+
+
+}
+.commentName{
+     font-size: small;
+
+}
+
+.commentText{
+     font-size: 0.9rem;
+
+}
+
 
 .Login {
     display: flex;

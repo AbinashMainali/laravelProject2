@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
 import http from "../helper/http";
-import {useParams} from "react-router-dom";
 
 
 export function Project() {
     const [users, setUsers] = useState([]);
     const [userComment, setUserComment] = useState("");
-    const [commentsList, setCommentsList] = useState([]);
+    const [commentList, setCommentList] = useState([]);
     const [id, setId] = useState("");
 
     const fetchAllUsers = () => {
@@ -16,9 +15,6 @@ export function Project() {
                 const userData = response.data ? response.data[0] : {};
                 setUsers(userData.name);
                 setId(userData.id);
-                const commentData = response.data || [];
-                setCommentsList(commentData.comment);
-
 
             })
             .catch((error) => {
@@ -26,12 +22,26 @@ export function Project() {
             });
     }
 
+    const fetchAllComments = () => {
+        http
+            .get("/users")
+            .then((response) => {
+                const commentData = response.data || [];
+                setCommentList(commentData);
+
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
     useEffect(() => {
-            fetchAllUsers();
+        fetchAllUsers();
+        fetchAllComments();
 
-        }
-        , []);
+
+    }, []);
+
 
     const handleCommentChange = (event) => {
         const name = event.target.name;
@@ -51,10 +61,11 @@ export function Project() {
         if (!userComment) {
             alert("Please enter comment")
         } else {
-            alert("Thank you for your comment")
-            http.put("/users/"+id, userComment).then((response) => {
+
+            http.put("/users/" + id, userComment).then((response) => {
                 console.log(response);
                 setUserComment("");
+                fetchAllComments();
             }).catch((error) => {
                     console.log(error);
 
@@ -64,7 +75,7 @@ export function Project() {
     }
 
     return (
-        <div className={"Project"}>
+        <div className={"Project "}>
 
             <div className={"Project-header"}>
 
@@ -90,19 +101,32 @@ export function Project() {
                     </div>
                     <div className={"Project-body-content card text-start m-2 p-2 shadow-sm"}>
                         <a href="https://counterstrikeonblogge.blogspot.com/" title={"Counter Strike"}
-                            className={"link-success text-decoration-none link-opacity-50-hover"}>
+                           className={"link-success text-decoration-none link-opacity-50-hover"}>
                             <h2>Counter Strike</h2>
                         </a>
-                        <p>CounterStrike was my favorite game back when I was school. I just started coding that time. So, with basic knowledge of HTML and CSS,
-                            I created this blog site which gives info about game installation and game server active and inactive connection.
-                        However, this a not a responsive blog site.</p>
+                        <p>CounterStrike was my favorite game back when I was school. I just started coding that time.
+                            So, with basic knowledge of HTML and CSS,
+                            I created this blog site which gives info about game installation and game server active and
+                            inactive connection.
+                            However, this a not a responsive blog site.</p>
 
+                    </div>
+                    <div className={"Project-body-content card text-start m-2 p-2 shadow-sm"}>
+                        <a href={"https://github.com/AbinashMainali/React-laravel-demo"} title={"React-laravel-Project"}
+                           className={"link-success text-decoration-none link-opacity-50-hover"}>
+                            <h2>React-laravel-Project</h2>
+                        </a>
+                        <p>React-laravel-Project is a web application that allows users to create, read, update, and
+                            delete (CRUD) data. The application is built using React, Laravel, and MySQL. The
+                            application
+                            is not yet deployed. But you can visit the github for code work.</p>
+
+                    </div>
                 </div>
-
-            </div>
                 <div className={"Project-footer "}>
                     <div className={"Project-footer-content"}>
-                        <div className={"Project-footer-content card text-start m-2 p-2 shadow-sm"}>
+                        <div
+                            className={"Project-footer-content bg-secondary text-white card text-start m-2 p-2 shadow-sm"}>
                             <h2>Comment</h2>
                             <p>Leave a comment</p>
                             <form>
@@ -113,22 +137,43 @@ export function Project() {
                                         name="comment"
                                         className="form-control mb-2"
                                         placeholder="Comment"
+                                        rows={1}
                                         value={userComment.comment || ""}
                                         onChange={handleCommentChange}
                                         onKeyDown={handleKeyDown}
                                     />
-                                   {/*// <textarea className="form-control" id="exampleFormControlTextarea1" rows="1" value={comment.comment} onChange={handleCommentChange} onKeyDown={handleKeyDown}/>*/}
                                 </div>
                             </form>
-                            {/*<div>*/}
-                            {/*    {commentsList.map((commentData) => (*/}
-                            {/*        <p key={commentData.id}>{commentData.comment}</p>*/}
-                            {/*    ))}*/}
-                            {/*</div>*/}
+                            <div>
+                                {
+                                    commentList.map((comment, index) => {
+
+                                            return(
+
+                                            <div key={index} className={"comment "}>
+                                                {comment.comments && (
+                                                    <>
+                                                        {comment.name && (
+                                                            <label
+                                                                className={"commentName"}>Visitor: {comment.name}</label>
+                                                        )}
+                                                        <p className={"commentText"}>{comment.comments}</p>
+                                                    </>
+                                                )}
+
+                                            </div>
+
+                                        )
+
+                                       }
+                                    )
+                                }
+                            </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
     );
 }
