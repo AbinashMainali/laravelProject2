@@ -31,7 +31,9 @@ class UserController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password'=>bcrypt($request->password)
+            'password'=>bcrypt($request->password),
+            'comments' => $request->comment,
+
 
 
         ]);
@@ -59,7 +61,12 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        User::where('id',$id)->update([
+
+            'comments' => $request->comment,
+        ]);
+        return response()->json(['message'=>'User updated successfully']);
+
     }
 
     /**
