@@ -7,6 +7,7 @@ import http from "../helper/http";
 export function Login() {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
+    const [isLoading, setIsLoading] = useState(false); //loading state
 
     //handle input change
     const handleChange = (event) => {
@@ -23,17 +24,21 @@ export function Login() {
         if (!inputs.name || !inputs.email) {
             alert("Please fill the form")
         } else {
-            alert("Thank you for your submission")
+            setIsLoading(true);    //set loading state to true
             //Send HTTP post request to create user
             http.post("/users/", inputs).then((response) => {
                 console.log(response);
                 //Navigate to project page
                 navigate("/project");
+
             }).catch((error) => {
                     console.log(error);
 
-                }
-            );
+                })
+                .finally(() => {
+                    setIsLoading(false);    //set loading state to false
+                });
+
         }
     }
 
@@ -73,8 +78,12 @@ export function Login() {
                     </div>
 
                     <div className={"d-grid gap-2"}>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">
+                            {isLoading ? "Loading..." : "Submit"}
+                        </button>
+
                     </div>
+
                 </form>
 
             </Card.Body>

@@ -1,4 +1,6 @@
 import {Container, Figure} from "react-bootstrap";
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+
 
 //Home Component
 export function Home() {
@@ -7,8 +9,9 @@ export function Home() {
 
             <Container className={"Home"}>
                 <div className={"Home-header m-3 text-success-emphasis"}>
-                    <h1>Hi! I am Abinash Mainali</h1>
+                    <h4><span style={{fontSize: "2rem"}}>Hi!</span> I'm Abinash Mainali</h4>
                 </div>
+
 
                 <Figure className={"Home"}>
                     <Figure.Image
@@ -21,22 +24,22 @@ export function Home() {
 
 
                 </Figure>
-                <h2>Graduate Software Developer</h2>
-                <p> I am a graduate software developer with a year of experience in developing web applications using
-                    React, Node, and PHP.
-                    I have a Bachelor's degree in Information Technology from the University of Sunshine Coast. </p>
+                <h2>Software Developer</h2>
+                <p>I'm a Software Developer based in Sunshine Coast, Australia. <br/> Want to know more? Follow the links! </p>
                 <div className={"web-link"}>
-                    <a href="https://www.linkedin.com/in/abinash-mainali-1b1b3a1b0/" className={"m-2 d-inline-block"}>
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin" width="50"
-                             height="50"/>
+                    <a href="https://www.linkedin.com/in/abinash-mainalli-2019291a4/" className={"m-2 d-inline-block"} target={"_blank"}  rel="noreferrer">
+                       
+                        <FaLinkedin className="icon" size={50} color={"black"}/>
+
                     </a>
-                    <a href="https://github.com/AbinashMainali" className={"m-2 d-inline-block"}>
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="50"
-                             height="50"/>
+                    <a href="https://github.com/AbinashMainali" className={"m-2 d-inline-block"} target={"_blank"}  rel="noreferrer">
+
+                        <FaGithub className="icon" size={50} color={"black"} />
                     </a>
-                    <a href="https://www.instagram.com/abinash_mainali/" className={"m-2 d-inline-block"}>
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" width="50"
-                             height="50"/>
+                    <a href="https://www.instagram.com/abinash_mainali/" className={"m-2 d-inline-block"} target={"_blank"}  rel="noreferrer">
+                        {/*<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" width="50"*/}
+                        {/*     height="50"/>*/}
+                        <FaInstagram className="icon" size={50} color={"black"}/>
                     </a>
                 </div>
 

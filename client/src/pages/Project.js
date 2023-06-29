@@ -68,7 +68,7 @@ export function Project() {
         } else {
 
             http.put("/users/" + id, userComment).then((response) => {
-                console.log(response);
+                //console.log(response);
                 setUserComment("");
                 fetchAllComments();
             }).catch((error) => {
@@ -95,7 +95,7 @@ export function Project() {
                 <div className={"Project-body"}>
                     <div className={"Project-body-content card text-start m-2 p-2 shadow-sm "}>
                         <a href="https://triviacontest.azurewebsites.net" title={"Trivia"}
-                           className={"link-success text-decoration-none link-opacity-50-hover"}>
+                           className={"link-success text-decoration-none link-opacity-50-hover"} target={"_blank"}  rel="noreferrer">
                             <h2>Trivia</h2>
                         </a>
                         <p>Trivia is a web application that allows users to play trivia games. The application is built
@@ -106,7 +106,7 @@ export function Project() {
                     </div>
                     <div className={"Project-body-content card text-start m-2 p-2 shadow-sm"}>
                         <a href="https://counterstrikeonblogge.blogspot.com/" title={"Counter Strike"}
-                           className={"link-success text-decoration-none link-opacity-50-hover"}>
+                           className={"link-success text-decoration-none link-opacity-50-hover"} target={"_blank"}  rel="noreferrer">
                             <h2>Counter Strike</h2>
                         </a>
                         <p>CounterStrike was my favorite game back when I was school. I just started coding that time.
@@ -118,7 +118,7 @@ export function Project() {
                     </div>
                     <div className={"Project-body-content card text-start m-2 p-2 shadow-sm"}>
                         <a href={"https://github.com/AbinashMainali/React-laravel-demo"} title={"React-laravel-Project"}
-                           className={"link-success text-decoration-none link-opacity-50-hover"}>
+                           className={"link-success text-decoration-none link-opacity-50-hover"} target={"_blank"} rel="noreferrer">
                             <h2>React-laravel-Project</h2>
                         </a>
                         <p>React-laravel-Project is a web application that allows users to create, read, update, and
