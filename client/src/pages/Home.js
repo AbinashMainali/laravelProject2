@@ -28,7 +28,7 @@ export function Home() {
                 <p>I'm a Software Developer based in Sunshine Coast, Australia. <br/> Want to know more? Follow the links! </p>
                 <div className={"web-link"}>
                     <a href="https://www.linkedin.com/in/abinash-mainalli-2019291a4/" className={"m-2 d-inline-block"} target={"_blank"}  rel="noreferrer">
-                       
+
                         <FaLinkedin className="icon" size={50} color={"black"}/>
 
                     </a>
