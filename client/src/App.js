@@ -2,7 +2,7 @@ import './App.css';
 
 import {NavLink, Route, Routes} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Container, Nav, Navbar, } from "react-bootstrap";
 import {Home} from "./pages/Home";
 import {Project} from "./pages/Project";
 import {Login} from "./pages/Login";
@@ -14,6 +14,8 @@ function App() {
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
+
+
                         <Nav className="ml-auto">
                             <NavLink to="/" className="nav-link">
                                 Home
