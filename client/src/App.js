@@ -5,8 +5,6 @@ import moment from 'moment/moment';
 import { Container, Nav, Navbar, } from "react-bootstrap";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { Project } from "./pages/Project";
 
 function App() {
     return (
