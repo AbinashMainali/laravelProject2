@@ -6,6 +6,7 @@ import {Container, Nav, Navbar, } from "react-bootstrap";
 import {Home} from "./pages/Home";
 import {Project} from "./pages/Project";
 import {Login} from "./pages/Login";
+import moment from 'moment/moment';
 
 function App() {
     return (
@@ -39,7 +40,7 @@ function App() {
             </div>
             <div className={"App-footer"}>
                 <Container>
-                    <p>© 2023 Abinash Mainali</p>
+                    <p>©{moment().format("YYYY")} Abinash Mainali</p>
 
                 </Container>
 
