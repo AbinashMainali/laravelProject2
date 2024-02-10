@@ -19,9 +19,9 @@ function App() {
                             <NavLink to="/" className="nav-link">
                                 Home
                             </NavLink>
-                            <NavLink to="/login" className="nav-link">
+                            {/* <NavLink to ="/project" className="nav-link">
                                 Project
-                            </NavLink>
+                            </NavLink> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -30,8 +30,7 @@ function App() {
                 {/*Route link to different element */}
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/project" element={<Project/>}/>
+                    {/* <Route path="/project" element={<Project/>}/> */}
 
                 </Routes>
 
