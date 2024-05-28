@@ -1,5 +1,6 @@
 import { Container, Figure } from "react-bootstrap";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import walk from "../walk.svg";
 
 //Home Component
 export function Home() {
@@ -7,11 +8,24 @@ export function Home() {
   return (
     <div>
       <Container className={"Home"}>
-        <div className={"Home-header m-3 text-success-emphasis"}>
-          <h4>
-            <span style={{ fontSize: "2rem" }}>Hi!</span> I'm Abinash Mainali
-          </h4>
-        </div>
+        {walk && (
+          <div
+            className={
+              "typewriter m-3 d-flex justify-content-center align-items-center "
+            }
+          >
+            <h4>
+              <span
+                className="text-primary-emphasis"
+                style={{ fontSize: "2.5rem" }}
+              >
+                Hi!
+              </span>{" "}
+              I'm Abinash Mainali
+            </h4>
+            <img src={walk} alt="" className="walker" />
+          </div>
+        )}
 
         <Figure className={"Home"}>
           <Figure.Image
@@ -34,7 +48,7 @@ export function Home() {
             href="https://www.linkedin.com/in/abinash-mainali-2019291a4/"
             className="m-2 d-inline-block"
             target="_blank"
-            rel="noreferrer noopenner"  
+            rel="noreferrer noopenner"
           >
             <FaLinkedin className="icon" size={50} color={"black"} />
           </a>

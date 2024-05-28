@@ -1,45 +1,40 @@
 .App {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.6;
-    letter-spacing: 0.0075em;
-
-
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-
 
 .App-main {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: black;
-    margin:1rem;
-    flex: 1 0 auto;
-
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  margin: 1rem;
+  flex: 1 0 auto;
 }
 
-.App-footer {
+/* .App-footer {
     background-color: #282c34;
     min-height: 10vh;
     display: flex;
@@ -49,149 +44,186 @@
     font-size: calc(10px + 2vmin);
     color: white;
 
+} */
+
+.Project {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.Project{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-
-
-
+.Project-body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
 }
 
-.Project-body{
-
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;
-
+.Project-body-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.Project-body-content{
-      height: 100%;
-       width: 100%;
-         display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
+.comment {
+  margin: 0.2rem;
+  height: 50%;
+}
+.commentName {
+  font-size: small;
 }
 
-
-.comment{
-    margin:0.2rem;
-    height: 50%;
-
-
-
+.commentText {
+  font-size: 0.9rem;
 }
-.commentName{
-     font-size: small;
-
-}
-
-.commentText{
-     font-size: 0.9rem;
-
-}
-
 
 .Login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
 
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    width: max-content;
-    margin-left: 1rem;
-    height: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: max-content;
+  margin-left: 1rem;
+  height: 100%;
 }
 
-.Login .card-title{
-    font: bold 1.5rem 'Fira Sans', sans-serif;
+.Login .card-title {
+  font: bold 1.5rem "Fira Sans", sans-serif;
 }
 
-.Login .card-text{
-    font: 1rem 'Fira Sans', sans-serif;
+.Login .card-text {
+  font: 1rem "Fira Sans", sans-serif;
 }
-
-
 
 .Login input[type="submit"]:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .Login a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 .Login a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .Login .error {
-    color: #cc0000;
-    margin-bottom: 1rem;
+  color: #cc0000;
+  margin-bottom: 1rem;
 }
 
 .Login .success {
-    color: #00cc00;
-    margin-bottom: 1rem;
+  color: #00cc00;
+  margin-bottom: 1rem;
 }
 
 .Login .loading {
-    color: #333;
-    margin-bottom: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .Login .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .Login .form-label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-weight: normal;
-    font: 1rem 'Fira Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: normal;
+  font: 1rem "Fira Sans", sans-serif;
 
-    margin-bottom: 0.5rem;
-    color: #333;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-.Login .form-check-label, .form-check-input{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-weight: normal;
-    font: 1rem 'Fira Sans', sans-serif;
-    margin-left:0.5rem;
-    margin-bottom: 0.5rem;
+.Login .form-check-label,
+.form-check-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: normal;
+  font: 1rem "Fira Sans", sans-serif;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
+@media (min-width: 768px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 42%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter h4 {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0;
+  animation: typing 3s steps(40, end) forwards, blink 1s step-end infinite;
+}
+
+.walker {
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .onepiece {
+    height: 8%;
+    width: 8%;
+  }
 }
 
 
-
-
-
+@media (max-width: 768px){
+    .onepiece {
+        height: 20%;
+        width: 20%;
+    }
+}
 
