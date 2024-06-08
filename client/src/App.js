@@ -9,7 +9,7 @@ import onepiece from "./onepiece.svg";
 
 function App() {
   return (
-    <div className={"App "}>
+    <div className={"App"}>
       <div className="App-main ">
         {/*Route link to different element */}
         <Routes>

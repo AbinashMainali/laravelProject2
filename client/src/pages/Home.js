@@ -1,7 +1,6 @@
 import { Container, Figure } from "react-bootstrap";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import walkgif from "../walk.gif";
-import walk from "../walk.svg";
 
 //Home Component
 export function Home() {
@@ -9,13 +8,13 @@ export function Home() {
   return (
     <div>
       <Container className={"Home"}>
-        {walk && (
+        {walkgif && (
           <div
             className={
               "typewriter m-3 d-flex justify-content-center align-items-center "
             }
           >
-            <h4>
+            <h4 style={{ fontSize: "1.5rem" }}>
               <span
                 className="text-primary-emphasis"
                 style={{ fontSize: "2.5rem" }}
@@ -39,8 +38,8 @@ export function Home() {
             }
           />
         </Figure>
-        <h2>Software Developer</h2>
-        <p>
+        <h2 style={{ fontSize: "2rem" }}>Software Developer</h2>
+        <p style={{ fontSize: "1.2rem" }}>
           I'm a Software Developer based in Sunshine Coast, Australia. <br />{" "}
           Want to know more? Follow the links!{" "}
         </p>
@@ -51,7 +50,7 @@ export function Home() {
             target="_blank"
             rel="noreferrer noopenner"
           >
-            <FaLinkedin className="icon" size={50} color={"black"} />
+            <FaLinkedin className="linkIcon" size={30} radius={50} />
           </a>
           <a
             href="https://github.com/AbinashMainali"
@@ -59,7 +58,7 @@ export function Home() {
             target={"_blank"}
             rel="noreferrer noopenner"
           >
-            <FaGithub className="icon" size={50} color={"black"} />
+            <FaGithub className="gitIcon" size={25}/>
           </a>
           <a
             href="https://www.instagram.com/abinash_mainali/"
@@ -67,7 +66,8 @@ export function Home() {
             target={"_blank"}
             rel="noreferrer noopenner"
           >
-            <FaInstagram className="icon" size={50} color={"black"} />
+            <FaInstagram className="instaIcon" size={25} />
+
           </a>
         </div>
       </Container>
