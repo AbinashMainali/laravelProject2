@@ -1,5 +1,6 @@
 import { Container, Figure } from "react-bootstrap";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import walkgif from "../walk.gif";
 import walk from "../walk.svg";
 
 //Home Component
@@ -23,7 +24,7 @@ export function Home() {
               </span>{" "}
               I'm Abinash Mainali
             </h4>
-            <img src={walk} alt="" className="walker" />
+            <img src={walkgif} alt="" className="walker" />
           </div>
         )}
 
